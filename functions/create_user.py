@@ -2,20 +2,20 @@ import os
 import datetime
 import getpass
 
-
+#skapar användare
 def create_user():
     print("=== Create User ===")
 
-    username = input("Ange användarnamn: ")
-    password = input("Ange lösenord: ")
+    username = input("Select Username: ")
+    password = input("Select Password: ")
 
-    # ✅ Simulering (ingen riktig skapning)
-    print(f"\n[SIMULERING] Skapar användare '{username}'...")
+    # only simulation
+    print(f"\n[simulating] Creating User '{username}'...")
 
-    # 🔹 Logga
+    #Log
     log_create_user(username, password)
 
-    print("Användare skapad (simulerat)")
+    print("User created")
 
 def log_create_user(username, password):
     base_dir = os.path.dirname(os.path.dirname(__file__))
@@ -34,22 +34,21 @@ def log_create_user(username, password):
 ===============================
 CREATE USER LOG
 
-Datum & Tid: {date_time}
-Skapad av: {admin_user}
+Date & Time: {date_time}
+Created By: {admin_user}
 
-Ny användare:
+New User:
   Username: {username}
   Password: {password}
 
 ===============================
 
-OBS: Lösenord lagras i klartext (inte krypterat).
-Detta är ENDAST för utbildningssyfte.
+ATTENTION PASSWORD IS NOT PROTECTED IN ANY WAY!!!
 ===============================
 """
-
+#sätter infon i loggfilen
     with open(log_path, "w", encoding="utf-8") as f:
         f.write(log_text)
 
-    print("Logg sparad:", log_path)
+    print("Log saved:", log_path)
  

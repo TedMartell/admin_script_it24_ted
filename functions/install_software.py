@@ -5,19 +5,19 @@ import getpass
 
 def install_software():
     print("=== Install Software ===")
-    print("1. Installera via grupp")
-    print("2. Installera individuellt")
-
-    choice = input("Val: ")
+    print("1. Installby group")
+    print("2. Install ind. software")
+    #Välj alternativ
+    choice = input("choice: ")
 
     if choice == "1":
         install_group()
     elif choice == "2":
         install_individual()
     else:
-        print("Ogiltigt val")
+        print("No Kinder Bueno! ")
 
-
+#Denna funktion installerar per grupp från JSON filen groups
 def install_group():
     with open("data/groups.json", "r", encoding="utf-8") as f:
         groups = json.load(f)
@@ -37,6 +37,8 @@ def install_group():
 
     log_install(programs, f"Grupp: {group_name}")
 
+
+#Installerar individuella program från JSON filen software
 def install_individual():
     with open("data/software.json", "r", encoding="utf-8") as f:
         software = json.load(f)["program"]
@@ -52,6 +54,8 @@ def install_individual():
     
     log_install([program_name], "Individuell installation")
 
+
+#Detta är log-funktionen
 def log_install(programs, method):
     base_dir = os.path.dirname(os.path.dirname(__file__))
     log_dir = os.path.join(base_dir, "logs")
@@ -66,12 +70,12 @@ def log_install(programs, method):
 
     log_text = f"""
 ===================
-Installationslogg
-Datum: {now}
-Användare: {user}
-Metod: {method}
+Install-log
+Date: {now}
+User: {user}
+Method: {method}
 
-Program:
+Software:
 """
 
     for p in programs:
@@ -82,4 +86,4 @@ Program:
     with open(log_path, "w", encoding="utf-8") as f:
         f.write(log_text)
 
-    print("Logg sparad:", log_path)
+    print("Log Created:", log_path)
