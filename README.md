@@ -1,9 +1,9 @@
-Admin Tool (Python)
+# Admin Tool (Python)
 Project Description
 This project is a Python-based admin tool that simulates common IT administration tasks.
 The script allows you to:
 
-Create users (simulated)
+### Create users (simulated)
 Install software (group-based or individual, simulated)
 Collect and log system information
 
