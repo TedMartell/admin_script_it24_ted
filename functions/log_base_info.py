@@ -67,17 +67,17 @@ Datum & Tid: {date_time}
 Körs av: {script_user}
 
 System:
-  Datornamn: {computer_name}
-  Användare: {user_name}
+  Computer Name: {computer_name}
+  User: {user_name}
   OS: {os_name}
-  Arkitektur: {architecture}
+  Architecture: {architecture}
 
 Hårdvara:
   CPU: {cpu}
-  RAM totalt: {ram_total} GB
-  RAM ledigt: {ram_free} GB
-  Disk C totalt: {disk_total} GB
-  Disk C ledigt: {disk_free} GB
+  RAM total: {ram_total} GB
+  RAM free: {ram_free} GB
+  Disk C total: {disk_total} GB
+  Disk C free: {disk_free} GB
 
 Nätverk:
   IP-adress: {ip_address}

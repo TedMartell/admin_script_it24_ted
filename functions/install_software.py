@@ -22,20 +22,20 @@ def install_group():
     with open("data/groups.json", "r", encoding="utf-8") as f:
         groups = json.load(f)
 
-    print("\nTillgängliga grupper:")
+    print("\nAvailable Groups:")
     for i, group in enumerate(groups.keys(), 1):
         print(f"{i}. {group}")
 
-    val = int(input("Välj grupp: "))
+    val = int(input("Choose Group: "))
     group_name = list(groups.keys())[val - 1]
     programs = groups[group_name]
 
-    print(f"\nInstallerar grupp: {group_name}")
+    print(f"\nInstalling Group: {group_name}")
 
     for program in programs:
-        print(f"Installerar {program}...")
+        print(f"Installing {program}...")
 
-    log_install(programs, f"Grupp: {group_name}")
+    log_install(programs, f"Group: {group_name}")
 
 
 #Installerar individuella program från JSON filen software
@@ -52,7 +52,7 @@ def install_individual():
 
     print(f"Installerar {program_name}...")
     
-    log_install([program_name], "Individuell installation")
+    log_install([program_name], "Individual installation")
 
 
 #Detta är log-funktionen
