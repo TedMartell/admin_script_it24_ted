@@ -35,22 +35,6 @@ Exit
 
 Select an option and follow the instructions.
 
-Project Structure
-projekt/
-│
-├── functions/
-│   ├── create_user.py        → Simulates creating a user and logs the action
-│   ├── install_software.py   → Installs software (group or individual, simulated)
-│   └── log_base_info.py      → Collects system information and logs it
-│
-├── data/
-│   ├── groups.json           → Defines software groups
-│   └── software.json         → List of available programs
-│
-├── logs/                     → Log files are saved here (ignored by Git)
-│
-└── main.py                   → Main menu and program entry point
-
 Permissions
 The script requires:
 
